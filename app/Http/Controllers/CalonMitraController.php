@@ -150,3 +150,7 @@ class CalonMitraController extends Controller
         return redirect()->route('calon-mitra.index')->with('success', 'Calon Mitra berhasil dihapus.');
     }
 }
+
+
+
+ 

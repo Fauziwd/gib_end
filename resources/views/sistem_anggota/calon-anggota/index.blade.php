@@ -4,15 +4,16 @@
 @section('content')
     <div class="p-6 h-screen">
         <div class="flex justify-center items-center">
-            <div class="bg-purple-200 dark:bg-blue-900 dark:text-white mb-10 rounded-lg px-10 w-1/2 shadow-lg">
-                <h1 class="text-4xl font-bold text-center py-4">Calon Anggota Paskas</h1>
-            </div>
+            <div class="bg-white dark:bg-gray-900 border border-gray-900 dark:border-white dark:text-white mb-5 mt-7 rounded-lg px-10 w-1/2"
+            style="border-width: 1px 4px 4px 1px; border-style: solid;">
+           <h1 class="text-4xl font-bold text-center py-4">Calon Anggota Paskas</h1>
+       </div>       
         </div>
 
         <!-- Tombol Tambah -->
         <div class="mt-10 mb-6">
             <a href="{{ route('calon-anggota.create') }}"
-                class="text-white bg-gradient-to-r from-teal-400 via-teal-500 to-teal-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-teal-300 dark:focus:ring-teal-800 shadow-lg shadow-teal-500/50 dark:shadow-lg dark:shadow-teal-950/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Masukkan
+                class="text-gray-800 border border-black dark:shadow-lg dark:shadow-teal-950/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"  style="border-width: 1px 5px 5px 1px; border-style: solid;">Masukkan
                 Calon Anggota</a>
         </div>
 
@@ -42,18 +43,18 @@
                         </svg>
                     </div>
                     <input type="search" name="keyword" id="default-search"
-                        class="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                        placeholder="Cari Nama Calon Anggota..." value="" required>
+                        class="block w-full p-4 pl-10 text-sm text-gray-900 rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white border border-gray-800"
+                        placeholder="Cari Nama Calon Anggota..." value="" required  style="border-width: 1px 4px 4px 1px; border-style: solid;">
                     <button type="submit"
-                        class="text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Cari</button>
+                        class="text-gray-800 absolute right-2.5 bottom-2.5 bg-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 border border-gray-800"  style="border-width: 1px 2px 2px 1px; border-style: solid;">Cari</button>
                 </div>
             </form>
         </div>
 
         <!-- Tabel Daftar Calon Anggota -->
-        <div class="relative overflow-x-auto shadow-2xl sm:rounded-lg">
-            <table class="w-full text-sm text-left text-gray-500 ">
-                <thead class="text-xs text-white uppercase bg-blue-500 dark:bg-blue-900 ">
+        <div class="relative overflow-x-auto shadow-2xl">
+            <table class="w-full text-sm text-left text-gray-500">
+                <thead class="text-xs text-gray-800 uppercase bg-white dark:bg-blue-900 border-2 border-black">
                     <tr class="border dark:border-blue-500">
                         <th scope="col" class="px-6 py-3 text-center">No.</th>
                         <th scope="col" class="px-6 py-3 text-center">Nama Lengkap</th>
@@ -63,7 +64,7 @@
                 </thead>
                 <tbody>
                     @foreach ($calonAnggota as $anggota)
-                        <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                        <tr class="bg-white border border-black dark:bg-gray-800 dark:border-gray-700">
                             <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white text-center">
                                 {{ $loop->iteration }}</td>
                             <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white text-center">

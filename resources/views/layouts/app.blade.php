@@ -25,14 +25,14 @@
 
     <!-- drawer component -->
     <div id="drawer-navigation"
-        class="fixed top-0 left-0 z-40 w-64 h-screen p-4  dark:text-white overflow-y-auto transition-transform -translate-x-full backdrop-blur-lg"
+        class="fixed top-0 left-0 z-40 w-64 h-screen p-4 dark:text-white dark:bg-gray-800 dark:border-r-white  overflow-y-auto bg-white border-2 border-r-black"
         tabindex="-1" aria-labelledby="drawer-navigation-label">
         <a href="/">
             <h5 id="drawer-navigation-label" class="text-base font-semibold text-gray-800 dark:text-white uppercase ">
                 Menu</h5>
         </a>
         <button type="button" data-drawer-hide="drawer-navigation" aria-controls="drawer-navigation"
-            class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 absolute top-2.5 right-2.5 inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white">
+            class="text-red-800 border border-black hover:shadow-lg dark:border-white hover:text-red-500 dark:hover:text-red-500 rounded-lg text-sm p-1.5 absolute top-2.5 right-2.5 inline-flex items-center dark:hover:text-white">
             <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd"
@@ -45,7 +45,7 @@
             <ul class="space-y-2 font-medium">
                 <li class="mb-4">
                     <a href="/home"
-                        class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700 hover:shadow-lg dark:hover:shadow-lg">
+                        class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white border border-black dark:border-white dark:hover:shadow-lg">
                         <svg xmlns="http://www.w3.org/2000/svg" width="25" fill="currentColor"
                             class="bi bi-speedometer2" viewBox="0 0 16 16">
                             <path
@@ -58,7 +58,7 @@
                 </li>
                 <li>
                     <button type="button"
-                        class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-200 dark:text-white dark:hover:bg-gray-700 hover:shadow-lg dark:hover:shadow-lg"
+                        class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg group border border-black dark:border-white hover:shadow-lg dark:border-white dark:text-white dark:hover:shadow-lg"
                         aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
                         <svg xmlns="http://www.w3.org/2000/svg" width="25" fill="currentColor"
                             class="bi bi-person-vcard" viewBox="0 0 16 16">
@@ -68,36 +68,38 @@
                                 d="M2 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H2ZM1 4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H8.96c.026-.163.04-.33.04-.5C9 10.567 7.21 9 5 9c-2.086 0-3.8 1.398-3.984 3.181A1.006 1.006 0 0 1 1 12V4Z" />
                         </svg>
                         <span class="flex-1 ml-3 text-left whitespace-nowrap">Keanggotaan</span>
-                        <svg class="w-6 h-6 text-gray-900 hover:text-gray-50 transition-colors duration-300"
+                        <svg class="w-6 h-6 text-gray-900 dark:text-white hover:text-gray-50 transition-colors duration-300"
                             fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd"
                                 d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
                                 clip-rule="evenodd"></path>
                         </svg>
                     </button>
-                    <ul id="dropdown-example" class="hidden py-2 space-y-2">
-
+                    <ul id="dropdown-example"
+                        class="hidden overflow-hidden transition-all duration-500 ease-in-out transform origin-top max-h-0 p-3 space-y-2 ml-2 relative text-gray-500 border-s border-gray-600">
+                
                         <li>
                             <a href="/calon-anggota"
-                                class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-blue-300 dark:text-white dark:hover:bg-gray-700 hover:shadow-2xl">Calon
+                                class="flex items-center w-full p-2 text-gray-900 rounded-md pl-4 group border border-black dark:border-white hover:shadow-lg dark:border-white dark:text-white">Calon
                                 Anggota</a>
                         </li>
                         <li>
                             <a href="/verifikasi-calon-anggota"
-                                class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-blue-300 dark:text-white dark:hover:bg-gray-700 hover:shadow-2xl">Verifikasi
-                                Calon Anggota</a>
+                                class="flex items-center w-full p-2 text-gray-900 rounded-md pl-4 group border border-black dark:border-white hover:shadow-lg dark:border-white dark:text-white">Verifikasi
+                                Calon</a>
                         </li>
                         <li>
                             <a href="/anggota"
-                                class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-blue-300 dark:text-white dark:hover:bg-gray-700 hover:shadow-2xl">
+                                class="flex items-center w-full p-2 text-gray-900 rounded-md pl-4 group border border-black dark:border-white hover:shadow-lg dark:border-white dark:text-white">
                                 Anggota Paskas</a>
                         </li>
-
+                
                     </ul>
                 </li>
+                
                 <li>
                     <button type="button"
-                        class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-200 dark:text-white dark:hover:bg-gray-700 hover:shadow-lg dark:hover:shadow-lg"
+                        class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg group dark:text-white border border-black hover:shadow-lg dark:border-white dark:hover:shadow-lg"
                         aria-controls="dropdown-example-ortu" data-collapse-toggle="dropdown-example-ortu">
                         <svg xmlns="http://www.w3.org/2000/svg" width="25" fill="currentColor"
                             class="bi bi-person-heart" viewBox="0 0 16 16">
@@ -105,62 +107,63 @@
                                 d="M9 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm-9 8c0 1 1 1 1 1h10s1 0 1-1-1-4-6-4-6 3-6 4Zm13.5-8.09c1.387-1.425 4.855 1.07 0 4.277-4.854-3.207-1.387-5.702 0-4.276Z" />
                         </svg>
                         <span class="flex-1 ml-3 text-left whitespace-nowrap"> Daftar OTA</span>
-                        <svg class="w-6 h-6 text-gray-900 hover:text-gray-50 transition-colors duration-300"
+                        <svg class="w-6 h-6 text-gray-900  dark:text-white hover:text-gray-50 transition-colors duration-300"
                             fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd"
                                 d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
                                 clip-rule="evenodd"></path>
                         </svg>
                     </button>
-                    <ul id="dropdown-example-ortu" class="hidden py-2 space-y-2">
+                    <ul id="dropdown-example-ortu" class="hidden overflow-hidden transition-all duration-500 ease-in-out transform origin-top max-h-0 p-3 space-y-2 ml-2 relative text-gray-500 border-s border-gray-600">
                         <li>
                             <a href="/daftar-ota"
-                                class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-blue-300 dark:text-white dark:hover:bg-gray-700 hover:shadow-2xl">
+                                class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-4 group border border-black dark:border-white hover:shadow-lg group hover:shadow-lg dark:text-white">
                                 Daftar Orang Tua Asuh</a>
                         </li>
                     </ul>
                 </li>
                 <li>
                     <button type="button"
-                        class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-200 dark:text-white dark:hover:bg-gray-700 hover:shadow-lg dark:hover:shadow-lg"
+                        class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg group border border-black dark:border-white hover:shadow-lg dark:border-white dark:text-white dark:hover:shadow-lg"
                         aria-controls="dropdown-example-calon-mitra"
                         data-collapse-toggle="dropdown-example-calon-mitra">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="25" fill="currentColor"
-                            class="bi bi-bank2" viewBox="0 0 16 16">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" fill="currentColor" class="bi bi-bank2"
+                            viewBox="0 0 16 16">
                             <path
                                 d="M8.277.084a.5.5 0 0 0-.554 0l-7.5 5A.5.5 0 0 0 .5 6h1.875v7H1.5a.5.5 0 0 0 0 1h13a.5.5 0 1 0 0-1h-.875V6H15.5a.5.5 0 0 0 .277-.916l-7.5-5zM12.375 6v7h-1.25V6h1.25zm-2.5 0v7h-1.25V6h1.25zm-2.5 0v7h-1.25V6h1.25zm-2.5 0v7h-1.25V6h1.25zM8 4a1 1 0 1 1 0-2 1 1 0 0 1 0 2zM.5 15a.5.5 0 0 0 0 1h15a.5.5 0 1 0 0-1H.5z" />
                         </svg>
                         <span class="flex-1 ml-3 text-left whitespace-nowrap">Pondok & Mitra</span>
-                        <svg class="w-6 h-6 text-gray-900 hover:text-gray-50 transition-colors duration-300"
+                        <svg class="w-6 h-6 text-gray-900  dark:text-white hover:text-gray-50 transition-colors duration-300"
                             fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd"
                                 d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
                                 clip-rule="evenodd"></path>
                         </svg>
                     </button>
-                    <ul id="dropdown-example-calon-mitra" class="hidden py-2 space-y-2">
+                    <ul id="dropdown-example-calon-mitra" class="hidden overflow-hidden transition-all duration-500 ease-in-out transform origin-top max-h-0 p-3 space-y-2 ml-2 relative text-gray-500 border-s border-gray-600">
                         <li>
                             <a href="/prioritas"
-                                class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-blue-300 dark:text-white dark:hover:bg-gray-700 hover:shadow-2xl">Daftar Grade</a>
+                                class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-4 group border border-black dark:border-white hover:shadow-lg hover:shadow-lg dark:text-white">Daftar
+                                Grade</a>
                         </li>
                         <li>
                             <a href="/calon-mitra"
-                                class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-blue-300 dark:text-white dark:hover:bg-gray-700 hover:shadow-2xl">Calon
+                                class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-4 group border border-black dark:border-white hover:shadow-lg hover:shadow-lg dark:text-white">Calon
                                 Mitra</a>
                         </li>
                         <li>
                             <a href="/pondok"
-                                class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-blue-300 dark:text-white dark:hover:bg-gray-700 hover:shadow-2xl">Daftar
+                                class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-4 group border border-black dark:border-white hover:shadow-lg hover:shadow-lg dark:text-white">Daftar
                                 Mitra</a>
                         </li>
                         <li>
                             <a href="/daftar_trip"
-                                class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-blue-300 dark:text-white dark:hover:bg-gray-700 hover:shadow-2xl">Daftar
+                                class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-4 group border border-black dark:border-white hover:shadow-lg hover:shadow-lg dark:text-white">Daftar
                                 Jalur Distribusi</a>
                         </li>
                         <li>
                             <a href="/trip-penyaluran-dana"
-                                class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-blue-300 dark:text-white dark:hover:bg-gray-700 hover:shadow-2xl">Daftar
+                                class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-4 group border border-black dark:border-white hover:shadow-lg hover:shadow-lg dark:text-white">Daftar
                                 Jalur Distribusi Donasi</a>
                         </li>
                     </ul>
@@ -168,7 +171,7 @@
 
                 <li>
                     <button type="button"
-                        class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-200 dark:text-white dark:hover:bg-gray-700 hover:shadow-lg dark:hover:shadow-lg"
+                        class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg group border border-black dark:border-white hover:shadow-lg dark:border-white dark:text-white  dark:hover:shadow-lg"
                         aria-controls="dropdown-example-daftar-trip"
                         data-collapse-toggle="dropdown-example-daftar-trip">
                         <svg xmlns="http://www.w3.org/2000/svg" width="25" fill="currentColor"
@@ -177,7 +180,7 @@
                                 d="M7 1.414V2H2a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h5v1H2.5a1 1 0 0 0-.8.4L.725 8.7a.5.5 0 0 0 0 .6l.975 1.3a1 1 0 0 0 .8.4H7v5h2v-5h5a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1H9V6h4.5a1 1 0 0 0 .8-.4l.975-1.3a.5.5 0 0 0 0-.6L14.3 2.4a1 1 0 0 0-.8-.4H9v-.586a1 1 0 0 0-2 0zM13.5 3l.75 1-.75 1H2V3h11.5zm.5 5v2H2.5l-.75-1 .75-1H14z" />
                         </svg>
                         <span class="flex-1 ml-3 text-left whitespace-nowrap">Keuangan</span>
-                        <svg class="w-6 h-6 text-gray-900 hover:text-gray-50 transition-colors duration-300"
+                        <svg class="w-6 h-6 text-gray-900  dark:text-white hover:text-gray-50 transition-colors duration-300"
                             fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd"
                                 d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
@@ -185,16 +188,16 @@
                         </svg>
                     </button>
 
-                    <ul id="dropdown-example-daftar-trip" class="hidden py-2 space-y-2">
+                    <ul id="dropdown-example-daftar-trip" class="hidden overflow-hidden transition-all duration-500 ease-in-out transform origin-top max-h-0 p-3 space-y-2 ml-2 relative text-gray-500 border-s border-gray-600">
                         <li>
                             <a href="/stok"
-                                class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-blue-300 dark:text-white dark:hover:bg-gray-700 hover:shadow-2xl">Data
+                                class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-4 group border border-black dark:border-white hover:shadow-lg hover:shadow-lg dark:text-white">Data
                                 Donasi
                             </a>
                         </li>
                         {{-- <li>
                             <a href="/stok"
-                                class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-blue-300 dark:text-white dark:hover:bg-gray-700 hover:shadow-2xl">Pengeluaran
+                                class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-4 group border border-black dark:border-white hover:shadow-lg hover:shadow-lg dark:text-white">Pengeluaran
                                 DPD
                             </a>
                         </li> --}}
@@ -203,7 +206,7 @@
 
                 <li>
                     <button type="button"
-                        class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-200 dark:text-white dark:hover:bg-gray-700 hover:shadow-lg dark:hover:shadow-lg"
+                        class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg group border border-black dark:border-white hover:shadow-lg dark:border-white dark:text-white dark:hover:shadow-lg"
                         aria-controls="dropdown-example-daftar-account"
                         data-collapse-toggle="dropdown-example-daftar-account">
                         <svg xmlns="http://www.w3.org/2000/svg" width="25" fill="currentColor"
@@ -213,7 +216,7 @@
                                 d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
                         </svg>
                         <span class="flex-1 ml-3 text-left whitespace-nowrap"> Peran & User</span>
-                        <svg class="w-6 h-6 text-gray-900 hover:text-gray-50 transition-colors duration-300"
+                        <svg class="w-6 h-6 text-gray-900  dark:text-white hover:text-gray-50 transition-colors duration-300"
                             fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd"
                                 d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
@@ -221,20 +224,20 @@
                         </svg>
                     </button>
 
-                    <ul id="dropdown-example-daftar-account" class="hidden py-2 space-y-2">
+                    <ul id="dropdown-example-daftar-account" class="hidden overflow-hidden transition-all duration-500 ease-in-out transform origin-top max-h-0 p-3 space-y-2 ml-2 relative text-gray-500 border-s border-gray-600">
                         <li>
                             <a href="/peran"
-                                class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-blue-300 dark:text-white dark:hover:bg-gray-700 hover:shadow-2xl">Peran</a>
+                                class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-4 group border border-black dark:border-white hover:shadow-lg hover:shadow-lg dark:text-white">Peran</a>
                         </li>
                         <li>
                             <a href="/user"
-                                class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-blue-300 dark:text-white dark:hover:bg-gray-700 hover:shadow-2xl">User</a>
+                                class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-4 group border border-black dark:border-white hover:shadow-lg hover:shadow-lg dark:text-white">User</a>
                         </li>
                     </ul>
                 </li>
                 <li>
                     <button type="button"
-                        class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-200 dark:text-white dark:hover:bg-gray-700 hover:shadow-lg dark:hover:shadow-lg"
+                        class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg group border border-black dark:border-white hover:shadow-lg dark:border-white dark:text-white dark:hover:shadow-lg"
                         aria-controls="dropdown-example-setting-theme"
                         data-collapse-toggle="dropdown-example-setting-theme">
                         <svg xmlns="http://www.w3.org/2000/svg" width="25" fill="currentColor"
@@ -242,8 +245,8 @@
                             <path fill-rule="evenodd"
                                 d="M11.5 2a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM9.05 3a2.5 2.5 0 0 1 4.9 0H16v1h-2.05a2.5 2.5 0 0 1-4.9 0H0V3h9.05zM4.5 7a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM2.05 8a2.5 2.5 0 0 1 4.9 0H16v1H6.95a2.5 2.5 0 0 1-4.9 0H0V8h2.05zm9.45 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm-2.45 1a2.5 2.5 0 0 1 4.9 0H16v1h-2.05a2.5 2.5 0 0 1-4.9 0H0v-1h9.05z" />
                         </svg>
-                        <span class="flex-1 ml-3 text-left whitespace-nowrap"> Setting Tema</span>
-                        <svg class="w-6 h-6 text-gray-900 hover:text-gray-50 transition-colors duration-300"
+                        <span class="flex-1 ml-3 text-left whitespace-nowrap">Tema</span>
+                        <svg class="w-6 h-6 text-gray-900  dark:text-white hover:text-gray-50 transition-colors duration-300"
                             fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd"
                                 d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
@@ -251,9 +254,9 @@
                         </svg>
                     </button>
 
-                    <ul id="dropdown-example-setting-theme" class="hidden py-2 space-y-2">
+                    <ul id="dropdown-example-setting-theme" class="hidden overflow-hidden transition-all duration-500 ease-in-out transform origin-top max-h-0 p-3 space-y-2 ml-2 relative text-gray-500 border-s border-gray-600">
                         <li
-                            class="flex items-center w-full p-2 text-yellow-400 transition duration-75 rounded-lg pl-11 group hover:bg-blue-300 dark:text-white dark:hover:bg-gray-700 hover:shadow-2xl">
+                            class="flex items-center w-full p-2 text-yellow-400 transition duration-75 rounded-lg pl-4 group border border-black dark:border-white hover:shadow-lg hover:shadow-lg dark:text-white">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" fill="currentColor"
                                 class="bi bi-lightbulb-fill" viewBox="0 0 16 16">
                                 <path
@@ -262,7 +265,7 @@
                             <button type="button" onclick="setLightMode()">Light</button>
                         </li>
                         <li
-                            class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-blue-300 dark:text-white dark:hover:bg-gray-700 hover:shadow-2xl">
+                            class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-4 group border border-black dark:border-white hover:shadow-lg hover:shadow-lg dark:text-white">
                             <svg class="dark:text-yellow-300" xmlns="http://www.w3.org/2000/svg" width="20"
                                 fill="currentColor" class="bi bi-moon-stars" viewBox="0 0 16 16">
                                 <path
@@ -275,10 +278,10 @@
                     </ul>
 
                 </li>
-                <hr>
+
                 <li>
                     <button type="button"
-                        class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-200 dark:text-white dark:hover:bg-gray-700 hover:shadow-lg dark:hover:shadow-lg"
+                        class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg group border border-black dark:border-white hover:shadow-lg dark:border-white dark:text-white dark:hover:shadow-lg"
                         aria-controls="dropdown-example-opsi" data-collapse-toggle="dropdown-example-opsi">
                         <svg aria-hidden="true"
                             class="flex-shrink-0 w-6 h-6 text-gray-9000 transition dura5on-75  group-hover:text-gray-900 dark:group-hover:text-white"
@@ -286,12 +289,12 @@
                             <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
                                 clip-rule="evenodd"></path>
                         </svg>
-                        <span class="flex-1 ml-3 text-left whitespace-nowrap"> Account</span>
+                        <span class="flex-1 ml-3 text-left whitespace-nowrap"> Akun</span>
                     </button>
-                    <ul id="dropdown-example-opsi" class="hidden py-2 space-y-2">
+                    <ul id="dropdown-example-opsi" class="hidden overflow-hidden transition-all duration-500 ease-in-out transform origin-top max-h-0 p-3 space-y-2 ml-2 relative text-gray-500 border-s border-gray-600">
                         <li>
                             <a href="/profile"
-                                class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-blue-300 dark:text-white dark:hover:bg-gray-700 hover:shadow-2xl">
+                                class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-4 group border border-black dark:border-white hover:shadow-lg hover:shadow-lg dark:text-white">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="23" fill="currentColor"
                                     class="bi bi-person-lines-fill" viewBox="0 0 16 16">
                                     <path
@@ -300,7 +303,7 @@
                                 My Profile</a>
                         </li>
                         <li>
-                            <a class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-blue-300 dark:hover:bg-gray-700 hover:shadow-2xl hover:text-red-500 dark:text-red-700"
+                            <a class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-4 group border border-black dark:border-white hover:shadow-lg hover:shadow-lg hover:shadow-2xl-500 dark:text-red-700"
                                 href="{{ route('logout') }}"
                                 onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="23" fill="currentColor"
@@ -313,6 +316,7 @@
                                 LogOut
                             </a>
                         </li>
+                        
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                             @csrf
                         </form>
@@ -355,6 +359,186 @@
 
         // Panggil fungsi checkTheme saat halaman dimuat
         checkTheme();
+
+        //Dropdown menu Sidebar1
+        document.addEventListener('DOMContentLoaded', function () {
+    const button = document.querySelector('button[data-collapse-toggle="dropdown-example"]');
+    const dropdown = document.getElementById('dropdown-example');
+    
+
+    button.addEventListener('click', function () {
+        if (dropdown.style.maxHeight) {
+            // If maxHeight is set, collapse the dropdown
+            dropdown.style.maxHeight = null;
+            dropdown.addEventListener('transitionend', function () {
+                if (!dropdown.style.maxHeight) {
+                    dropdown.classList.add('hidden');
+                }
+            }, { once: true });
+        } else {
+            // Expand the dropdown
+            dropdown.classList.remove('hidden');
+            dropdown.style.maxHeight = dropdown.scrollHeight + 'px';
+            dropdown.addEventListener('transitionend', function () {
+                dropdown.style.maxHeight = 'none'; // Prevent maxHeight from interfering with future transitions
+            }, { once: true });
+        }
+    });
+});
+
+//Dropdown menu Sidebar2
+        document.addEventListener('DOMContentLoaded', function () {
+    const button = document.querySelector('button[data-collapse-toggle="dropdown-example-ortu"]');
+    const dropdown = document.getElementById('dropdown-example-ortu');
+    
+
+    button.addEventListener('click', function () {
+        if (dropdown.style.maxHeight) {
+            // If maxHeight is set, collapse the dropdown
+            dropdown.style.maxHeight = null;
+            dropdown.addEventListener('transitionend', function () {
+                if (!dropdown.style.maxHeight) {
+                    dropdown.classList.add('hidden');
+                }
+            }, { once: true });
+        } else {
+            // Expand the dropdown
+            dropdown.classList.remove('hidden');
+            dropdown.style.maxHeight = dropdown.scrollHeight + 'px';
+            dropdown.addEventListener('transitionend', function () {
+                dropdown.style.maxHeight = 'none'; // Prevent maxHeight from interfering with future transitions
+            }, { once: true });
+        }
+    });
+});
+
+//Dropdown menu Sidebar3
+document.addEventListener('DOMContentLoaded', function () {
+    const button = document.querySelector('button[data-collapse-toggle="dropdown-example-calon-mitra"]');
+    const dropdown = document.getElementById('dropdown-example-calon-mitra');
+    
+
+    button.addEventListener('click', function () {
+        if (dropdown.style.maxHeight) {
+            // If maxHeight is set, collapse the dropdown
+            dropdown.style.maxHeight = null;
+            dropdown.addEventListener('transitionend', function () {
+                if (!dropdown.style.maxHeight) {
+                    dropdown.classList.add('hidden');
+                }
+            }, { once: true });
+        } else {
+            // Expand the dropdown
+            dropdown.classList.remove('hidden');
+            dropdown.style.maxHeight = dropdown.scrollHeight + 'px';
+            dropdown.addEventListener('transitionend', function () {
+                dropdown.style.maxHeight = 'none'; // Prevent maxHeight from interfering with future transitions
+            }, { once: true });
+        }
+    });
+});
+//Dropdown menu Sidebar4
+document.addEventListener('DOMContentLoaded', function () {
+    const button = document.querySelector('button[data-collapse-toggle="dropdown-example-daftar-trip"]');
+    const dropdown = document.getElementById('dropdown-example-daftar-trip');
+    
+
+    button.addEventListener('click', function () {
+        if (dropdown.style.maxHeight) {
+            // If maxHeight is set, collapse the dropdown
+            dropdown.style.maxHeight = null;
+            dropdown.addEventListener('transitionend', function () {
+                if (!dropdown.style.maxHeight) {
+                    dropdown.classList.add('hidden');
+                }
+            }, { once: true });
+        } else {
+            // Expand the dropdown
+            dropdown.classList.remove('hidden');
+            dropdown.style.maxHeight = dropdown.scrollHeight + 'px';
+            dropdown.addEventListener('transitionend', function () {
+                dropdown.style.maxHeight = 'none'; // Prevent maxHeight from interfering with future transitions
+            }, { once: true });
+        }
+    });
+});
+//Dropdown menu Sidebar5
+document.addEventListener('DOMContentLoaded', function () {
+    const button = document.querySelector('button[data-collapse-toggle="dropdown-example-daftar-account"]');
+    const dropdown = document.getElementById('dropdown-example-daftar-account');
+    
+
+    button.addEventListener('click', function () {
+        if (dropdown.style.maxHeight) {
+            // If maxHeight is set, collapse the dropdown
+            dropdown.style.maxHeight = null;
+            dropdown.addEventListener('transitionend', function () {
+                if (!dropdown.style.maxHeight) {
+                    dropdown.classList.add('hidden');
+                }
+            }, { once: true });
+        } else {
+            // Expand the dropdown
+            dropdown.classList.remove('hidden');
+            dropdown.style.maxHeight = dropdown.scrollHeight + 'px';
+            dropdown.addEventListener('transitionend', function () {
+                dropdown.style.maxHeight = 'none'; // Prevent maxHeight from interfering with future transitions
+            }, { once: true });
+        }
+    });
+});
+//Dropdown menu Sidebar6
+document.addEventListener('DOMContentLoaded', function () {
+    const button = document.querySelector('button[data-collapse-toggle="dropdown-example-setting-theme"]');
+    const dropdown = document.getElementById('dropdown-example-setting-theme');
+    
+
+    button.addEventListener('click', function () {
+        if (dropdown.style.maxHeight) {
+            // If maxHeight is set, collapse the dropdown
+            dropdown.style.maxHeight = null;
+            dropdown.addEventListener('transitionend', function () {
+                if (!dropdown.style.maxHeight) {
+                    dropdown.classList.add('hidden');
+                }
+            }, { once: true });
+        } else {
+            // Expand the dropdown
+            dropdown.classList.remove('hidden');
+            dropdown.style.maxHeight = dropdown.scrollHeight + 'px';
+            dropdown.addEventListener('transitionend', function () {
+                dropdown.style.maxHeight = 'none'; // Prevent maxHeight from interfering with future transitions
+            }, { once: true });
+        }
+    });
+});
+
+//Dropdown menu Sidebar7
+document.addEventListener('DOMContentLoaded', function () {
+    const button = document.querySelector('button[data-collapse-toggle="dropdown-example-opsi"]');
+    const dropdown = document.getElementById('dropdown-example-opsi');
+    
+
+    button.addEventListener('click', function () {
+        if (dropdown.style.maxHeight) {
+            // If maxHeight is set, collapse the dropdown
+            dropdown.style.maxHeight = null;
+            dropdown.addEventListener('transitionend', function () {
+                if (!dropdown.style.maxHeight) {
+                    dropdown.classList.add('hidden');
+                }
+            }, { once: true });
+        } else {
+            // Expand the dropdown
+            dropdown.classList.remove('hidden');
+            dropdown.style.maxHeight = dropdown.scrollHeight + 'px';
+            dropdown.addEventListener('transitionend', function () {
+                dropdown.style.maxHeight = 'none'; // Prevent maxHeight from interfering with future transitions
+            }, { once: true });
+        }
+    });
+});
+
     </script>
 </body>
 
